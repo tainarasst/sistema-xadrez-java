@@ -2,6 +2,6 @@ package Xadrez;
 
 public enum Cores {
 
-	BRACO,
+	BRANCO,
 	PRETO;
 }

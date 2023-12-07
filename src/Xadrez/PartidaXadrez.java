@@ -28,10 +28,19 @@ public class PartidaXadrez {
 	}
 	
 	private void confInicial() {
-		lugarNovaPeca('b', 6, new Torre(tabuleiro, Cores.BRACO));
-		lugarNovaPeca('e', 8, new Rei(tabuleiro, Cores.PRETO));
-		lugarNovaPeca('e', 1, new Rei(tabuleiro, Cores.BRACO));
+		lugarNovaPeca('c', 1, new Torre(tabuleiro, Cores.BRANCO));
+		lugarNovaPeca('c', 2, new Torre(tabuleiro, Cores.BRANCO));
+		lugarNovaPeca('d', 2, new Torre(tabuleiro, Cores.BRANCO));
+		lugarNovaPeca('e', 2, new Torre(tabuleiro, Cores.BRANCO));
+		lugarNovaPeca('e', 1, new Torre(tabuleiro, Cores.BRANCO));
+		lugarNovaPeca('d', 1, new Rei(tabuleiro, Cores.BRANCO));
 
+		lugarNovaPeca('c', 7, new Torre(tabuleiro, Cores.PRETO));
+		lugarNovaPeca('c', 8, new Torre(tabuleiro, Cores.PRETO));
+		lugarNovaPeca('d', 7, new Torre(tabuleiro, Cores.PRETO));
+		lugarNovaPeca('e', 7, new Torre(tabuleiro, Cores.PRETO));
+		lugarNovaPeca('e', 8, new Torre(tabuleiro, Cores.PRETO));
+		lugarNovaPeca('d', 8, new Rei(tabuleiro, Cores.PRETO));
 	}
 	
 }
