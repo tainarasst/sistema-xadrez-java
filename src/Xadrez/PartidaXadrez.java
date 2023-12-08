@@ -16,13 +16,13 @@ public class PartidaXadrez {
 	}
 	
 	public PecasXadrez[][] getPecas(){
-		PecasXadrez[][] pex = new  PecasXadrez[tabuleiro.getLinha()][tabuleiro.getColuna()];
+		PecasXadrez[][] mat = new  PecasXadrez[tabuleiro.getLinha()][tabuleiro.getColuna()];
 		for (int i=0; i<tabuleiro.getLinha(); i++) {
 			for (int j=0; j<tabuleiro.getColuna(); j++) {
-				pex[i][j] = (PecasXadrez) tabuleiro.pecas(i, j);
+				mat[i][j] = (PecasXadrez) tabuleiro.pecas(i, j);
 			}
 		}
-		return pex;
+		return mat;
 	}
 	
 	public PecasXadrez exeMoviXadrez(PosicaoXadrez posicaoOrigem, PosicaoXadrez posicaoDestino) {
@@ -44,6 +44,9 @@ public class PartidaXadrez {
 	private void validarPosicaoOrigem(Posicao posicao) {
 		if (!tabuleiro.haUmaPeca(posicao)) {
 			throw new ExcecaoXadrez("Nao existe pecas na posicao de origem.");
+		}
+		if(!tabuleiro.pecas(posicao).peloMenosUmMov()) {
+			throw new ExcecaoXadrez("Nao ha movimento possivel para a peca escolhida.");
 		}
 	}
 	
