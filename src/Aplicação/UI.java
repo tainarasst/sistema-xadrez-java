@@ -54,7 +54,7 @@ public class UI {
 			System.out.print((8 - i) + " ");
 
 			for (int j = 0; j < pecas.length; j++) {
-				printPecas(pecas[i][j]);
+				printPecas(pecas[i][j], false);
 			}
 			System.out.println();
 		}
@@ -62,9 +62,25 @@ public class UI {
 	}
 
 	
-	private static void printPecas(PecasXadrez piece) {
+	public static void printTatuleiro(PecasXadrez[][] pecas, boolean[][] possibMover) {
+		for (int i = 0; i < pecas.length; i++) {
+			System.out.print((8 - i) + " ");
+
+			for (int j = 0; j < pecas.length; j++) {
+				printPecas(pecas[i][j], possibMover[i][j]);
+			}
+			System.out.println();
+		}
+		System.out.println("  a b c d e f g h");
+	}
+	
+	
+	private static void printPecas(PecasXadrez piece, boolean background) {
+		if(background) {
+			System.out.print(ANSI_BLUE_BACKGROUND);
+		}
     	if (piece == null) {
-            System.out.print("-");
+            System.out.print("-" + ANSI_RESET);
         }
         else {
             if (piece.getCores() == Cores.BRANCO) {
