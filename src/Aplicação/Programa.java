@@ -20,7 +20,7 @@ public class Programa {
 		
 		
 		
-		while (true) {
+		while (!partidaXadrez.getCheckMate()) {
 			try {
 				UI.limparTela();
 				UI.printPartida(partidaXadrez, captura);
@@ -51,6 +51,9 @@ public class Programa {
 			}
 			
 		}
+		
+		UI.limparTela();
+		UI.printPartida(partidaXadrez, captura);
 
 	}
 }
