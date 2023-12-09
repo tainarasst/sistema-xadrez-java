@@ -58,8 +58,11 @@ public class UI {
 		System.out.println();
 		printCapturaPecas(capturada);
 		System.out.println();
-		System.out.println("Turno: " + partidaXadrez.getVez());
+		System.out.println("Turno: " + partidaXadrez.getTurno());
 		System.out.println("Esperando jogador jogar: " + partidaXadrez.getJogadorAtual());
+		if(partidaXadrez.getCheck()) {
+			System.out.println("CHECK!");
+		}
 	}
 	
 	

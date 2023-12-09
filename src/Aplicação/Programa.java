@@ -40,7 +40,7 @@ public class Programa {
 				if(capturadaPecas != null) {
 					captura.add(capturadaPecas);
 				}
-			}
+		}
 			catch (ExcecaoXadrez e) {
 				System.out.println(e.getMessage());
 				sc.nextLine();
