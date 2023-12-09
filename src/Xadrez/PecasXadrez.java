@@ -7,6 +7,7 @@ import JogoTabuleiro.Tabuleiro;
 public abstract class PecasXadrez extends Pecas {
 	
 	private Cores cores;
+	private int contarMov;
 
 	public PecasXadrez(Tabuleiro tabuleiro, Cores cores) {
 		super(tabuleiro);
@@ -15,6 +16,18 @@ public abstract class PecasXadrez extends Pecas {
 
 	public Cores getCores() {
 		return cores;
+	}
+	
+	public int getContarMov() {
+		return contarMov;
+	}
+	
+	public void aumentarContarMov() {
+		contarMov++;
+	}
+	
+	public void diminuirContarMov() {
+		contarMov--;
 	}
 	
 	public PosicaoXadrez getPosicaoXadrez() {
