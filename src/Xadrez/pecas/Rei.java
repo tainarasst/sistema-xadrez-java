@@ -84,7 +84,7 @@ public class Rei extends PecasXadrez {
 			mat[p.getLinha()][p.getColuna()] = true;
 		}
 
-		// Movimento Especial - Roque
+		// Jogada Especial - Roque
 		if (getContarMov() == 0 && !partidaXadrez.getCheck()) {
 			// Movimento Especial - Roque Pqueno
 			Posicao posT1 = new Posicao(posicao.getLinha(), posicao.getColuna() + 3);
@@ -95,7 +95,7 @@ public class Rei extends PecasXadrez {
 					mat[posicao.getLinha()][posicao.getColuna() + 2] = true;
 				}
 			}
-			// Movimento Especial - Roque Grande
+			// Jogada Especial - Roque Grande
 			Posicao posT2 = new Posicao(posicao.getLinha(), posicao.getColuna() - 4);
 			if (testeRoqueTorre(posT2)) {
 				Posicao p1 = new Posicao(posicao.getLinha(), posicao.getColuna() - 1);
